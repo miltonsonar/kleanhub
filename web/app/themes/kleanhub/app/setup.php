@@ -6,7 +6,14 @@
 
 namespace App;
 
+use App\Modules\CleanUp;
 use Illuminate\Support\Facades\Vite;
+
+CleanUp::getInstance();
+
+require_once 'Modules/acf.php';
+require_once 'Modules/acf-blocks.php';
+require_once 'Modules/blocks.php';
 
 /**
  * Inject styles into the block editor.
@@ -76,7 +83,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'main_navigation' => __('Main Navigation', 'sage'),
+        'footer_navigation' => __('Footer Navigation', 'sage'),
     ]);
 
     /**
@@ -152,4 +160,58 @@ add_action('widgets_init', function () {
         'name' => __('Footer', 'sage'),
         'id' => 'sidebar-footer',
     ] + $config);
+});
+
+/**
+ * Remove Comments menu from WordPress admin.
+ *
+ * @return void
+ */
+add_action('admin_menu', function () {
+    remove_menu_page('edit-comments.php');
+});
+
+/**
+ * Remove comments link from admin bar
+ *
+ * @return void
+ */
+add_action('wp_before_admin_bar_render', function () {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+});
+
+/**
+ * Change the label for the "Settings" menu item
+ *
+ * @return void
+ */
+add_action('admin_menu', function () {
+    global $menu;
+
+    // Find the "Settings" menu (which is at index 75)
+    foreach ($menu as $index => $item) {
+        if ($item[0] == 'Settings') {
+            // Change 'Settings' to new label here
+            $menu[$index][0] = 'CMS Settings';  // Replace with desired label
+        }
+    }
+}, 999);
+
+/**
+ * Edit admin sidebar (edit page screen) label
+ *
+ * @return void
+ */
+add_action('admin_enqueue_scripts', function () {
+    $screen = get_current_screen();
+    if ($screen->base === 'post') {
+        wp_enqueue_script(
+            'edit-block',
+            get_template_directory_uri().'/resources/js/edit-block.js',
+            ['wp-dom-ready'],
+            false,
+            true
+        );
+    }
 });
