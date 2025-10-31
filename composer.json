@@ -28,6 +28,14 @@
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "composer",
+      "url": "https://connect.advancedcustomfields.com"
+    },
+    {
+      "type": "composer",
+      "url": "https://composer.deliciousbrains.com"
     }
   ],
   "require": {
@@ -39,6 +47,13 @@
     "roots/bedrock-disallow-indexing": "^2.0",
     "roots/wordpress": "6.8.3",
     "roots/wp-config": "1.0.0",
+    "wpengine/advanced-custom-fields-pro": "6.6.1",
+    "deliciousbrains-plugin/wp-migrate-db-pro": "2.7.6",
+    "wpackagist-plugin/disable-comments": "2.5.3",
+    "wpackagist-plugin/duplicate-post": "4.5",
+    "wpackagist-plugin/post-types-order":"2.4.0",
+    "wpackagist-plugin/query-monitor":"3.20.0",
+    "wpackagist-plugin/duracelltomi-google-tag-manager": "1.22.1",
     "wpackagist-theme/twentytwentyfive": "^1.0"
   },
   "require-dev": {
@@ -57,7 +72,7 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "wpengine/advanced-custom-fields-pro", "wpackagist-plugin/disable-comments", "wpackagist-plugin/post-types-order", "wpackagist-plugin/duplicate-post"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
