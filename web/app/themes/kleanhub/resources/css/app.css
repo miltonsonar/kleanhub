@@ -1,3 +1,13 @@
-@import "tailwindcss" theme(static);
+@import "tailwindcss";
+
+/* Brand */
+@import './brand/fonts.css';
+@import './brand/theme.css';
+@import './brand/base.css';
+
+/* Sections */
+@import './sections/header.css';
+@import './sections/footer.css';
+
 @source "../views/";
 @source "../../app/";

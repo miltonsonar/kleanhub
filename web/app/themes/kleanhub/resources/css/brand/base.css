@@ -1,0 +1,14 @@
+@layer base {
+  html,
+  body {
+    /*@apply font-sans font-normal text-base text-dark antialiased bg-dark;*/
+
+    text-rendering: geometricPrecision; /* Best rendering for high-DPI screens */
+    font-feature-settings: "kern" 1, "liga" 1; /* Enable kerning and ligatures */
+  }
+
+  *, *::before, *::after {
+    -webkit-font-smoothing: subpixel-antialiased; /* Chrome, Safari */
+    -moz-osx-font-smoothing: auto; /* Firefox on macOS */
+  }
+}
