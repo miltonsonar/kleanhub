@@ -1,0 +1,51 @@
+/* Typography */
+/* Forms */
+.btn,
+.btn-primary,
+input[type="submit"],
+button,
+.button {
+  @apply font-sans font-medium text-lg md:text-base text-dark-blue py-[10px] px-[24px] bg-white border border-dark-blue no-underline cursor-pointer transition rounded inline-block leading-normal align-middle box-border text-center;
+  @apply hover:bg-blue hover:border-blue hover:text-white;
+}
+
+.btn-secondary,
+button.btn-secondary {
+  @apply font-sans font-medium text-lg md:text-base text-light-silver py-[10px] px-[24px] bg-dark-blue border border-dark-blue no-underline cursor-pointer transition rounded inline-block leading-normal align-middle box-border text-center;
+  @apply hover:bg-light-blue hover:border-light-blue hover:text-dark-blue;
+}
+
+.btn-inverse,
+button.btn-inverse {
+  @apply font-sans font-medium text-lg md:text-base text-white py-[10px] px-[24px] bg-blue border border-blue no-underline cursor-pointer transition rounded inline-block leading-normal align-middle box-border text-center;
+  @apply hover:bg-white hover:border-dark-blue hover:text-dark-blue;
+}
+
+input[type="text"]:not(.adminbar-input),
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+textarea {
+  @apply !border-2 !p-[14px] !font-sans !text-base !font-normal !border-blue !text-spanish-grey !h-auto;
+  @apply focus:!outline-1;
+}
+
+label {
+  @apply !text-base !font-sans !text-dark-blue !font-normal;
+}
+
+/* Classes */
+.gform_button {
+  @apply !font-sans !font-medium !text-lg md:!text-base !text-white !py-[10px] !px-[24px] !bg-blue !border !border-blue !no-underline !cursor-pointer !transition !rounded !inline-block !leading-normal !align-middle !box-border !text-center;
+  @apply hover:!bg-white hover:!border-dark-blue hover:!text-dark-blue;
+}
+
+.gform_fields {
+  @apply !gap-y-4;
+}

@@ -4,6 +4,7 @@
 @import './brand/fonts.css';
 @import './brand/theme.css';
 @import './brand/base.css';
+@import './brand/utilities.css';
 
 /* Sections */
 @import './sections/header.css';

@@ -1,7 +1,7 @@
 @layer base {
   html,
   body {
-    /*@apply font-sans font-normal text-base text-dark antialiased bg-dark;*/
+    @apply font-sans font-normal text-base text-dark-blue leading-tight antialiased;
 
     text-rendering: geometricPrecision; /* Best rendering for high-DPI screens */
     font-feature-settings: "kern" 1, "liga" 1; /* Enable kerning and ligatures */
@@ -10,5 +10,51 @@
   *, *::before, *::after {
     -webkit-font-smoothing: subpixel-antialiased; /* Chrome, Safari */
     -moz-osx-font-smoothing: auto; /* Firefox on macOS */
+  }
+
+  h1 {
+    @apply text-[32px] mb-4 font-bold;      /* mobile */
+  }
+
+  @media (min-width: 48rem) { /* md breakpoint */
+    h1 {
+      @apply text-[40px];    /* desktop */
+    }
+  }
+
+  h2 {
+    @apply text-[28px] mb-4 font-bold;
+  }
+
+  h3 {
+    @apply text-[24px] mb-4 font-bold;
+  }
+
+  h4 {
+    @apply text-[20px] mb-4 font-bold;
+  }
+
+  h5 {
+    @apply text-[20px] mb-4 font-medium;
+  }
+
+  h6 {
+    @apply text-base mb-4 font-bold;
+  }
+
+  p {
+    @apply font-sans font-normal leading-snug text-base mb-4;
+  }
+
+  a {
+    @apply font-sans font-normal text-base leading-tight no-underline hover:underline transition;
+  }
+
+  ul {
+    @apply list-disc pl-6 space-y-2 leading-tight;
+  }
+
+  ol {
+    @apply list-decimal pl-6 space-y-2 leading-tight;
   }
 }

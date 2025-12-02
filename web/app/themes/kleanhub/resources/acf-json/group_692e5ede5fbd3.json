@@ -48,7 +48,7 @@
         {
             "key": "field_692e5fee79141",
             "label": "Type",
-            "name": "style_copy",
+            "name": "type",
             "aria-label": "",
             "type": "button_group",
             "instructions": "",
@@ -93,6 +93,35 @@
             },
             "return_format": "array",
             "allow_in_bindings": 0
+        },
+        {
+            "key": "field_692f40117d3a2",
+            "label": "Label",
+            "name": "label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_692e5fee79141",
+                        "operator": "==",
+                        "value": "modal"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_692e603179144",
@@ -268,5 +297,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764661405
+    "modified": 1764704295
 }
