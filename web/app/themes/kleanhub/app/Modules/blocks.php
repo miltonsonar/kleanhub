@@ -10,7 +10,7 @@ add_filter('block_categories_all', function ($categories, $block_editor_context)
 // May need for some pages
 add_filter('render_block', function ($block_content, $block) {
     if (in_array($block['blockName'], ['core/heading', 'core/paragraph', 'core/list'])) {
-        return '<div class="container">'.$block_content.'</div>';
+        return '<div class="container">' . $block_content . '</div>';
     }
 
     return $block_content;
@@ -24,7 +24,21 @@ add_filter('allowed_block_types_all', function ($allowed_block_types, $block_edi
 
     $block_types = [
         // Custom Blocks
-        // 'acf/home-banner',
+        'acf/home-banner',
+        'acf/content-columns',
+        'acf/image-banner',
+        'acf/left-right',
+        'acf/content-cards',
+        'acf/promotional-banner',
+        'acf/gallery-slider',
+        'acf/testimonials',
+        'acf/form',
+        'acf/page-banner',
+        'acf/faqs',
+        'acf/members',
+        'acf/contact',
+        'acf/icon-cards',
+        'acf/separator',
     ];
 
     //    if (in_array($post->post_type, ['testimonial', 'team'])) {
