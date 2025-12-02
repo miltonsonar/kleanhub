@@ -36,6 +36,22 @@
     {
       "type": "composer",
       "url": "https://composer.deliciousbrains.com"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "gravityforms/gravityforms",
+        "version": "2.9.23.1",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://www.gravityhelp.com/wp-content/plugins/gravitymanager/api.php?op=get_plugin&slug=gravityforms&key={%WP_PLUGIN_GF_KEY}"
+        },
+        "require": {
+          "composer/installers": "^2.2",
+          "gotoandplay/gravityforms-composer-installer": "^2.3"
+        }
+      }
     }
   ],
   "require": {
@@ -54,6 +70,7 @@
     "wpackagist-plugin/post-types-order":"2.4.0",
     "wpackagist-plugin/query-monitor":"3.20.0",
     "wpackagist-plugin/duracelltomi-google-tag-manager": "1.22.2",
+    "gravityforms/gravityforms": "2.9.23.1",
     "wpackagist-theme/twentytwentyfive": "^1.0"
   },
   "require-dev": {
@@ -65,7 +82,9 @@
     "preferred-install": "dist",
     "allow-plugins": {
       "composer/installers": true,
-      "roots/wordpress-core-installer": true
+      "roots/wordpress-core-installer": true,
+      "ffraenz/private-composer-installer": true,
+      "gotoandplay/gravityforms-composer-installer": true
     }
   },
   "minimum-stability": "dev",
