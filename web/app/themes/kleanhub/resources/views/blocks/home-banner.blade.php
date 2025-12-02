@@ -1,14 +1,10 @@
 {{--
   Title: Home Banner
-  Description:
+  Description: Hero banner for homepage with heading and call-to-action buttons
   Category: blocks
   Mode: edit
   SupportsMode: false
   Preview: home-banner
-  Icon:
+  Icon: welcome-view-site
 --}}
-
-<pre>
-  @php var_dump($block) @endphp
-</pre>
-
+<section id="{{ $block_id }}" class="block home-banner {{ $block_class }}"></section>

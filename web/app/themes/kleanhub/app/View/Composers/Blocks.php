@@ -37,7 +37,10 @@ class Blocks extends Composer
      */
     public function with(): array
     {
-        return $this->data();
+        $data = $this->data();
+        $data['block_id'] = get_field('block_id');
+        $data['block_class'] = get_field('block_class');
+        return $data;
     }
 
 }

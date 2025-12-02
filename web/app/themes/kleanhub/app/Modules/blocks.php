@@ -4,7 +4,7 @@ namespace App\Modules;
 
 // Block Data Filters
 add_filter('block_categories_all', function ($categories, $block_editor_context) {
-    return array_merge([['slug' => 'blocks', 'title' => 'Page Modules']], $categories);
+    return array_merge([['slug' => 'blocks', 'title' => 'Page Blocks']], $categories);
 }, 10, 2);
 
 // May need for some pages
