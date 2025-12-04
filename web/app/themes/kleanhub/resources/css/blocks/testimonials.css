@@ -1,0 +1,30 @@
+/* Testimonials Block Styles */
+
+/* Slider styles (mobile and desktop) */
+.testimonials .container {
+  @apply overflow-visible;
+}
+
+.testimonials-slider .slick-list {
+  @apply overflow-visible;
+}
+
+.testimonials-slider .slick-track {
+  @apply flex items-stretch;
+}
+
+.testimonials-slider .slick-slide {
+  @apply flex h-auto pr-5;
+}
+
+.testimonials-slider .slick-slide:last-child {
+  @apply pr-0;
+}
+
+.testimonials-slider .slide-item {
+  @apply flex w-full;
+}
+
+.testimonials-slider .testimonial-card {
+  @apply flex-1;
+}

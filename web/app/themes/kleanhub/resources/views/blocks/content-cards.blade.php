@@ -23,7 +23,7 @@
       <div class="cards-slider mb-8 md:grid md:grid-cols-2 {{ $layout == 'grid-cols-2' ? 'lg:grid-cols-2' : ($layout == 'grid-cols-4' ? 'lg:grid-cols-4' : 'lg:grid-cols-3') }} md:gap-5">
         @foreach($cards as $card)
           <div class="slide-item">
-            <div class="content-card p-6 rounded-2xl bg-light-blue h-full">
+            <div class="content-card p-6 rounded-2xl bg-cultured h-full">
               @if($card['icon'])
                 @include('utilities.img', ['image' => $card['icon'], 'class' => 'w-auto h-[52px] mb-8'])
               @endif

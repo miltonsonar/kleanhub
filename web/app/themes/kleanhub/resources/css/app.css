@@ -12,6 +12,7 @@
 
 /* Blocks */
 @import './blocks/content-cards.css';
+@import './blocks/testimonials.css';
 
 @source "../views/";
 @source "../../app/";
