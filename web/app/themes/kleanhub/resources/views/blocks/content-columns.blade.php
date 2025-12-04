@@ -20,7 +20,7 @@
     )
 
     @if($cards)
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:{{ $layout }} gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 {{ $layout == 'grid-cols-2' ? 'lg:grid-cols-2' : ($layout == 'grid-cols-4' ? 'lg:grid-cols-4' : 'lg:grid-cols-3') }} gap-6">
         @foreach($cards as $card)
           <div class="h-full">
             <div class="content-col group relative h-full md:p-6 rounded-2xl rounded-bl-none border-[1.5px] border-white transition duration-300 cursor-pointer md:hover:border-blue"
@@ -57,7 +57,7 @@
                                    : (isset($card['cta']['style']) && $card['cta']['style'] == 'inverse'
                                      ? 'group-hover:!bg-white group-hover:!border-dark-blue group-hover:!text-dark-blue'
                                      : 'group-hover:!bg-blue group-hover:!border-blue group-hover:!text-white')),
-                      'id' => 'content-col-cta-1-'.$block_id
+                      'id' => 'content-col-cta-'.$block_id
                     ])
                   </div>
                 @endif

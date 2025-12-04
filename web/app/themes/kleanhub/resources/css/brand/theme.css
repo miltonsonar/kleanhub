@@ -30,6 +30,7 @@
   --color-cultured: oklch(0.9731 0 0); /* #f6f6f6 */
   --color-chinese-black: oklch(0.1985 0.0204 239.61); /* #0D171E */
   --color-light-silver: oklch(0.877 0.0096 222.07); /* #D0D8DB */
+  --color-light-lotion: oklch(0.9851 0 0);/* #fafafa */
   /* Colors Opacity */
   --color-light-blue-o: oklch(0.9715 0.0167 230.9 / 85.1%); /* #EBF8FFD9 */
   --color-black-o: oklch(0 0 0 / 85%); /* rgba(0, 0, 0, 0.85) */

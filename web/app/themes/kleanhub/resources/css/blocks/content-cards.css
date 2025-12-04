@@ -1,0 +1,33 @@
+/* Content Cards Block Styles */
+
+/* Mobile: Default (Slider with peek of next slide) */
+.content-cards .container {
+  @apply overflow-visible;
+}
+
+.cards-slider .slick-list {
+  @apply overflow-visible;
+}
+
+.cards-slider .slick-track {
+  @apply flex items-stretch;
+}
+
+.cards-slider .slick-slide {
+  @apply flex h-auto;
+}
+
+.cards-slider .slide-item {
+  @apply pr-[1.25rem] flex w-full; /* 20px */
+}
+
+.cards-slider .content-card {
+  @apply flex-1;
+}
+
+/* Desktop: Reset slider padding */
+@media (min-width: 48rem) { /* 768px */
+  .cards-slider .slide-item {
+    @apply px-0 w-full;
+  }
+}

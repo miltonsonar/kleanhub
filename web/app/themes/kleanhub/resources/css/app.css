@@ -10,5 +10,8 @@
 @import './sections/header.css';
 @import './sections/footer.css';
 
+/* Blocks */
+@import './blocks/content-cards.css';
+
 @source "../views/";
 @source "../../app/";
