@@ -20,6 +20,7 @@
 
   /* Colors */
   --color-blue: oklch(0.5967 0.1297 236.72); /* #0089C2 */
+  --color-white: oklch(0.9962 0.0053 197.07); /* #faffff */
   --color-light-blue: oklch(0.9715 0.0167 230.9); /* #EBF8FF */
   --color-dark-blue: oklch(0.1809 0.0183 238.29); /* #0A1319 */
   --color-lotion: oklch(0.9913 0.0013 286.38); /* #FCFCFD */

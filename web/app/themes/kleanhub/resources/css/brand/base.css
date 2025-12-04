@@ -1,7 +1,7 @@
 @layer base {
   html,
   body {
-    @apply font-sans font-normal text-base text-dark-blue leading-tight antialiased;
+    @apply font-sans font-normal text-base text-dark-blue leading-tight antialiased bg-white;
 
     text-rendering: geometricPrecision; /* Best rendering for high-DPI screens */
     font-feature-settings: "kern" 1, "liga" 1; /* Enable kerning and ligatures */
