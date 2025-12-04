@@ -94,7 +94,7 @@
                     "pagination": 0,
                     "min": 0,
                     "max": 0,
-                    "collapsed": "",
+                    "collapsed": "field_692e97a290238",
                     "button_label": "Add Card",
                     "rows_per_page": 20,
                     "sub_fields": [
@@ -223,7 +223,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 14,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -233,5 +233,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764661221
+    "modified": 1764814308
 }

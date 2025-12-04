@@ -119,7 +119,7 @@
                     "pagination": 0,
                     "min": 0,
                     "max": 0,
-                    "collapsed": "",
+                    "collapsed": "field_692ea2a56e304",
                     "button_label": "Add Member",
                     "rows_per_page": 20,
                     "sub_fields": [
@@ -230,7 +230,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 7,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -240,5 +240,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764664125
+    "modified": 1764814647
 }

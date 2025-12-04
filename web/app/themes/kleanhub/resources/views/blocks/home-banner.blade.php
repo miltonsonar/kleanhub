@@ -9,7 +9,7 @@
 --}}
 <section id="{{ $block_id }}" class="block home-banner js-modal relative min-h-[393px] md:min-h-[600px] px-5 {{ $block_class }}">
   @include('utilities.bg', ['class' => 'max-h-[393px] md:max-h-none', 'image' => $image])
-  <div class="container mx-auto pt-[409px] md:pt-[195px] max-w-[83.125rem] z-0">
+  <div class="container mx-auto pt-[409px] md:pt-[195px] max-w-[83.125rem]">
     @include('utilities.heading', [
               'class' => 'max-w-[744px]',
               'sub_heading' => $sub_heading,

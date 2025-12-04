@@ -19,6 +19,7 @@ class Blocks extends Composer
         'blocks.content-columns',
         'blocks.image-banner',
         'blocks.left-right',
+        'blocks.accordion-content',
         'blocks.content-cards',
         'blocks.promotional-banner',
         'blocks.gallery-slider',

@@ -1,13 +1,13 @@
 {{--
-  Title: Content Columns
-  Description: Display content in a multi-column grid layout with optional images, titles, descriptions and CTAs
+  Title: Accordion Content
+  Description: Content section with heading, image, CTA button and optional collapsible accordion items
   Category: blocks
   Mode: edit
   SupportsMode: false
-  Preview: content-columns
-  Icon: columns
+  Preview: accordion-content
+  Icon: list-view
 --}}
-<section id="{{ $block_id }}" class="block content-columns js-modal relative px-5 pt-[36px] pb-[50px] md:py-[70px] {{ $block_class }}">
+<section id="{{ $block_id }}" class="block accordion-content js-modal relative px-5 pt-[36px] pb-[50px] md:py-[70px] {{ $block_class }}">
   <div class="container mx-auto max-w-[83.125rem]">
     @include('utilities.heading', [
         'class' => 'md:max-w-[90%] mb-6',

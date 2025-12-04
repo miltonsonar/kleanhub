@@ -28,6 +28,7 @@ add_filter('allowed_block_types_all', function ($allowed_block_types, $block_edi
         'acf/content-columns',
         'acf/image-banner',
         'acf/left-right',
+        'acf/accordion-content',
         'acf/content-cards',
         'acf/promotional-banner',
         'acf/gallery-slider',
