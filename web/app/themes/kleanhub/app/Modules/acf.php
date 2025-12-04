@@ -61,3 +61,10 @@ add_filter('acf/load_field', function ($field) {
 
     return $field;
 });
+
+// Disable ACF block mode switcher (eye icon) globally
+add_filter('acf/blocks/register_block_type_args', function ($args) {
+    $args['mode'] = 'edit';
+    $args['supports']['mode'] = false;
+    return $args;
+});

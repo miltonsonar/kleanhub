@@ -18,5 +18,29 @@
         'content' => $content,
         'content_class' => '']
     )
+
+    @if($cards)
+      <div class="grid grid-cols-1 md:grid-cols-2 {{ $layout == 'grid-cols-2' ? 'lg:grid-cols-2' : ($layout == 'grid-cols-4' ? 'lg:grid-cols-4' : 'lg:grid-cols-3') }} gap-6">
+        @foreach($cards as $card)
+          <div class="h-full">
+            <div class="icon-card h-full p-8 rounded-lg bg-anti-white">
+              @if($card['icon'])
+                @include('utilities.img', ['image' => $card['icon'], 'class' => 'w-auto h-[48px] mb-6'])
+              @endif
+              @if($card['title'])
+                @include('utilities.text', ['tag' => 'h3', 'class' => 'mb-6', 'text' => $card['title']])
+              @endif
+
+              @if($card['link'])
+                @include('utilities.link', [
+                    'link' => $card['link'],
+                    'class' => 'text-[20px] font-bold'
+                ])
+              @endif
+            </div>
+          </div>
+        @endforeach
+      </div>
+    @endif
   </div>
 </section>

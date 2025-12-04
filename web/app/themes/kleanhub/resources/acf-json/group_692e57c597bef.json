@@ -77,6 +77,31 @@
                     "endpoint": 0
                 },
                 {
+                    "key": "field_693212aee49ba",
+                    "label": "Layout",
+                    "name": "layout",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "grid-cols-2": "Two Columns",
+                        "grid-cols-3": "Three Columns",
+                        "grid-cols-4": "Four Columns"
+                    },
+                    "default_value": "grid-cols-3",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "allow_in_bindings": 0,
+                    "layout": "horizontal"
+                },
+                {
                     "key": "field_692ea43a844a9",
                     "label": "Cards",
                     "name": "cards",
@@ -179,7 +204,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 5,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -189,5 +214,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764664529
+    "modified": 1764889300
 }
