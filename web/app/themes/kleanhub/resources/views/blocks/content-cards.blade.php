@@ -28,7 +28,7 @@
                 @include('utilities.img', ['image' => $card['icon'], 'class' => 'w-auto h-[52px] mb-8'])
               @endif
               @if($card['title'])
-                @include('utilities.text', ['tag' => 'h4', 'class' => 'mb-2', 'text' => $card['title']])
+                @include('utilities.text', ['tag' => 'h4', 'class' => ($card['icon'])? 'mb-2': 'mb-6', 'text' => $card['title']])
               @endif
               @if($card['content'])
                 @include('utilities.text', ['tag' => 'p', 'class' => 'mb-0', 'text' => $card['content']])

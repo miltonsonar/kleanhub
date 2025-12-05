@@ -12,7 +12,7 @@ button,
 .btn-secondary,
 button.btn-secondary {
   @apply font-sans font-medium text-lg md:text-base text-light-silver py-[10px] px-[24px] bg-dark-blue border border-dark-blue no-underline cursor-pointer transition rounded inline-block leading-normal align-middle box-border text-center;
-  @apply hover:bg-light-blue hover:border-light-blue hover:text-dark-blue;
+  @apply hover:bg-light-blue hover:border-dark-blue hover:text-dark-blue;
 }
 
 .btn-inverse,
