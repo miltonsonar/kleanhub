@@ -1,0 +1,73 @@
+/* Gallery Slider Block */
+.gallery-slider-container {
+  @apply relative overflow-hidden;
+}
+
+.gallery-slider .gallery {
+  @apply relative;
+}
+
+/* Slide sizing - mobile: 80% viewport width, desktop: 946px */
+.gallery-slider .gallery .slide {
+  transition: opacity 0.3s ease;
+}
+
+.gallery-slider .gallery .slide-image {
+  @apply w-[80vw] lg:w-[946px] mx-auto;
+}
+
+.gallery-slider .gallery .slick-slide {
+  @apply mx-3;
+}
+
+/* Black overlay on inactive slides */
+.gallery-slider .gallery .slide::before {
+  content: '';
+  @apply absolute inset-0 bg-black opacity-80 pointer-events-none z-10;
+  transition: opacity 0.3s ease;
+}
+
+/* Remove overlay from active (center) slide */
+.gallery-slider .gallery .slick-slide.slick-center .slide::before {
+  @apply opacity-0;
+}
+
+/* Arrow styling */
+.gallery-slider .slick-arrow {
+  @apply absolute top-1/2 -translate-y-1/2 z-20;
+  @apply cursor-pointer;
+  @apply !bg-transparent !border-none !outline-none !p-0;
+}
+
+.gallery-slider .slick-prev {
+  @apply left-4;
+}
+
+.gallery-slider .slick-next {
+  @apply right-4;
+}
+
+/* Desktop: arrows 48px from active slide edges */
+@media (min-width: 64rem) {
+  .gallery-slider .slick-prev {
+    left: calc(50% - 575px);
+  }
+
+  .gallery-slider .slick-next {
+    right: calc(50% - 575px);
+  }
+}
+
+.gallery-slider .slick-arrow img {
+  @apply block w-[45px] h-[45px] lg:w-[60px] lg:h-[60px];
+}
+
+/* Slick track */
+.gallery-slider .slick-track {
+  @apply flex items-center;
+}
+
+/* Hide arrows when disabled */
+.gallery-slider .slick-arrow.slick-disabled {
+  @apply opacity-50 cursor-not-allowed;
+}

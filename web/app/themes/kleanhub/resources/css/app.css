@@ -13,6 +13,7 @@
 /* Blocks */
 @import './blocks/content-cards.css';
 @import './blocks/testimonials.css';
+@import './blocks/gallery-slider.css';
 
 @source "../views/";
 @source "../../app/";
