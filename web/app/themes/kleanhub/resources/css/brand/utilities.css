@@ -33,7 +33,7 @@ input[type="time"],
 input[type="datetime-local"],
 textarea {
   @apply !border-2 !p-[14px] !font-sans !text-base !font-normal !border-blue !text-spanish-grey !h-auto;
-  @apply focus:!outline-1;
+  @apply focus:!outline-1 !bg-transparent;
 }
 
 label {
