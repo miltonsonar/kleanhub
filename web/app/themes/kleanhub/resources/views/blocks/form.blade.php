@@ -13,7 +13,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 rounded-2xl rounded-bl-0 bg-anti-white-100 p-6 md:p-20">
       <div class="h-full">
         @include('utilities.heading', [
-          'class' => 'md:max-w-[85%] mb-6',
+          'class' => 'md:max-w-[85%] mb-10',
           'sub_heading' => $sub_heading,
           'sub_heading_class' => 'mb-2 leading-none',
           'title' => $title,

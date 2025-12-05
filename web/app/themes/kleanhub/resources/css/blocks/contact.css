@@ -1,0 +1,3 @@
+.contact input[type="submit"]{
+  @apply !w-full;
+}

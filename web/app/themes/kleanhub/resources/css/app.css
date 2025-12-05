@@ -14,6 +14,8 @@
 @import './blocks/content-cards.css';
 @import './blocks/testimonials.css';
 @import './blocks/gallery-slider.css';
+@import './blocks/contact.css';
+@import './blocks/form.css';
 
 @source "../views/";
 @source "../../app/";

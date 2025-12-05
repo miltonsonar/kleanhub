@@ -1,0 +1,14 @@
+section.form .gform-footer {
+  @apply !justify-end;
+}
+
+section.form input[type="submit"] {
+  @apply !w-full;
+}
+
+@media (min-width: 48rem) {
+  section.form input[type="submit"] {
+    width: auto !important;
+    min-width: 270px !important;
+  }
+}
