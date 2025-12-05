@@ -30,7 +30,7 @@
         @if($cta)
           @include('utilities.cta', [
             'cta' => $cta,
-            'class' => 'w-full md:w-auto mb-0 min-w-[270px]',
+            'class' => 'w-full md:w-auto mb-0 md:min-w-[270px]',
             'id' => 'promo-banner-cta-'.$block_id
           ])
         @endif
