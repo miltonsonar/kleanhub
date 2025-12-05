@@ -64,4 +64,9 @@
   ol {
     @apply list-decimal pl-6 space-y-2 leading-tight;
   }
+
+  /* Spacing for sections immediately after main */
+  main > section:first-child:not(.page-banner):not(.home-banner) {
+    @apply mt-[112px] md:mt-[100px];
+  }
 }

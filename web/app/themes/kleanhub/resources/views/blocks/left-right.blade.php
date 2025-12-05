@@ -17,7 +17,7 @@
         'title' => $heading['title'] ?? '',
         'title_class' => '',
         'content' => $heading['content'] ?? '',
-        'content_class' => '']
+        'content_class' => '[&>*]:text-lg']
       )
     @endif
 
@@ -41,7 +41,7 @@
               'title' => $content['title'] ?? '',
               'title_class' => '',
               'content' => $content['content'] ?? '',
-              'content_class' => '']
+              'content_class' => '[&>*]:text-lg']
           )
         @endif
 
