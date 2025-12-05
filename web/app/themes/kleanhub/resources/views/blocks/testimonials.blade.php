@@ -7,7 +7,7 @@
   Preview: testimonials
   Icon: testimonial
 --}}
-<section id="{{ $block_id }}" class="block testimonials js-modal js-testimonials relative px-5 pt-[36px] pb-[50px] md:py-[70px] {{ $block_class }}">
+<section id="{{ $block_id }}" class="block testimonials js-modal js-testimonials relative px-5 pt-[36px] pb-[50px] md:py-[70px] overflow-hidden {{ $block_class }}">
   <div class="container mx-auto max-w-[83.125rem]">
     @include('utilities.heading', [
         'class' => 'md:max-w-[90%] mb-6',
