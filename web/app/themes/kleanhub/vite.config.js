@@ -2,7 +2,6 @@ import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite';
 import laravel from 'laravel-vite-plugin'
 import { wordpressPlugin, wordpressThemeJson } from '@roots/vite-plugin';
-import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
   base: '/app/themes/kleanhub/public/build/',
@@ -26,16 +25,6 @@ export default defineConfig({
       disableTailwindColors: false,
       disableTailwindFonts: false,
       disableTailwindFontSizes: false,
-    }),
-
-    // Copy images from resources to public
-    viteStaticCopy({
-      targets: [
-        {
-          src: 'resources/images/*',
-          dest: 'images'
-        }
-      ]
     }),
   ],
   resolve: {

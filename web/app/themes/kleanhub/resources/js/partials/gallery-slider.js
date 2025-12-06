@@ -1,5 +1,7 @@
 import $ from 'jquery';
 import 'slick-carousel';
+import arrowLeft from '@images/arrow-left.png';
+import arrowRight from '@images/arrow-right.png';
 
 export default function() {
   const $slider = $('.js-gallery-slider .gallery');
@@ -17,8 +19,8 @@ export default function() {
       swipeToSlide: true,
       focusOnSelect: true,
       adaptiveHeight: false,
-      prevArrow: '<button type="button" class="slick-prev"><img src="/app/themes/kleanhub/public/build/images/arrow-left.png" alt="Previous"></button>',
-      nextArrow: '<button type="button" class="slick-next"><img src="/app/themes/kleanhub/public/build/images/arrow-right.png" alt="Next"></button>'
+      prevArrow: `<button type="button" class="slick-prev"><img src="${arrowLeft}" alt="Previous"></button>`,
+      nextArrow: `<button type="button" class="slick-next"><img src="${arrowRight}" alt="Next"></button>`
     });
   }
 }
