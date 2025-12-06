@@ -22,4 +22,20 @@ class App extends Composer
     {
         return get_bloginfo('name', 'display');
     }
+
+    /**
+     * @return false|mixed
+     */
+    public function header(): mixed
+    {
+        return get_field('header', 'option');
+    }
+
+    /**
+     * @return false|mixed
+     */
+    public function footer(): mixed
+    {
+        return get_field('footer', 'option');
+    }
 }

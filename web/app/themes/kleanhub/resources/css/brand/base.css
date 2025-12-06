@@ -1,10 +1,22 @@
 @layer base {
-  html,
+  html {
+    @apply min-h-screen;
+  }
+
   body {
     @apply font-sans font-normal text-base text-dark-blue leading-tight antialiased bg-white;
+    @apply min-h-screen;
 
     text-rendering: geometricPrecision; /* Best rendering for high-DPI screens */
     font-feature-settings: "kern" 1, "liga" 1; /* Enable kerning and ligatures */
+  }
+
+  #app {
+    @apply min-h-screen flex flex-col;
+  }
+
+  main {
+    @apply flex-1;
   }
 
   *, *::before, *::after {

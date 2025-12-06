@@ -83,8 +83,9 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'main_navigation' => __('Main Navigation', 'sage'),
-        'footer_navigation' => __('Footer Navigation', 'sage'),
+        'main_nav' => __('Main Menu', 'sage'),
+        'footer_left_nav' => __('Footer Left Menu', 'sage'),
+        'footer_right_nav' => __('Footer Right Menu', 'sage'),
     ]);
 
     /**

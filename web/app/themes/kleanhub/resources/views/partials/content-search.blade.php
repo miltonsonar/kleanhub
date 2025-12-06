@@ -1,15 +1,21 @@
-<article @php(post_class())>
-  <header>
-    <h2 class="entry-title">
-      <a href="{{ get_permalink() }}">
-        {!! $title !!}
-      </a>
-    </h2>
+<section class="block relative px-5 pt-[36px] pb-[50px] md:py-[70px]">
+  <div class="container mx-auto max-w-[83.125rem]">
+    <article @php(post_class())>
+      <header>
+        <h2 class="entry-title">
+          <a href="{{ get_permalink() }}">
+            {!! $title !!}
+          </a>
+        </h2>
 
-    @includeWhen(get_post_type() === 'post', 'partials.entry-meta')
-  </header>
+        @includeWhen(get_post_type() === 'post', 'partials.entry-meta')
+      </header>
 
-  <div class="entry-summary">
-    @php(the_excerpt())
+      <div class="entry-summary">
+        @php(the_excerpt())
+      </div>
+    </article>
   </div>
-</article>
+</section>
+
+

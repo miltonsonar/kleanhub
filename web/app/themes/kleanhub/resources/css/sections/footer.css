@@ -1,0 +1,26 @@
+/* Footer Navigation Menus */
+.footer .nav-primary .nav {
+  @apply list-none p-0 m-0;
+}
+
+/* Parent menu items styled as h4 */
+.footer .nav-primary .nav > li {
+  @apply mb-4;
+}
+
+.footer .nav-primary .nav > li > a {
+  @apply text-[20px] font-bold text-white no-underline hover:underline;
+}
+
+/* Sub-menu items */
+.footer .nav-primary .nav li ul {
+  @apply list-none pl-0 mt-2;
+}
+
+.footer .nav-primary .nav li ul li {
+  @apply mb-2;
+}
+
+.footer .nav-primary .nav li ul li a {
+  @apply text-base font-normal text-white no-underline hover:underline;
+}
