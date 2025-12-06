@@ -80,4 +80,27 @@ export default function() {
       });
     }
   });
+
+  // Scroll behavior - hide header on scroll down, show on scroll up
+  let lastScrollTop = 0;
+  let scrollThreshold = 10; // Minimum scroll distance to trigger hide/show
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Only trigger if scrolled more than threshold
+    if (Math.abs(scrollTop - lastScrollTop) < scrollThreshold) {
+      return;
+    }
+
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+      // Scrolling down & past 100px
+      header.classList.add('header-hidden');
+    } else {
+      // Scrolling up
+      header.classList.remove('header-hidden');
+    }
+
+    lastScrollTop = scrollTop;
+  });
 }
