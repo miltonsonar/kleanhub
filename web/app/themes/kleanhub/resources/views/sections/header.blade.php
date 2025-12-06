@@ -26,7 +26,7 @@
           <div class="top-cta lg:ml-6">
             @include('utilities.cta', [
               'cta' => $header()['top_cta'],
-              'class' => '!text-lg',
+              'class' => 'top-cta-link lg:!text-lg',
               'id' => 'md-top-cta'
             ])
           </div>
