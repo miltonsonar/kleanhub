@@ -1,0 +1,200 @@
+/* Icon Phone Link */
+.icon-phone::before {
+  content: '';
+  @apply inline-block w-6 h-6;
+  margin-right: 8px;
+  vertical-align: middle;
+  background-image: url('../../images/icon-phone.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Hamburger Icon */
+.header .hamburger {
+  @apply relative w-8 h-8 bg-transparent border-none cursor-pointer p-0;
+  @apply flex flex-col justify-center items-center gap-1.5;
+}
+
+/* Hide hamburger on desktop */
+@media (min-width: 64rem) {
+  .header .hamburger {
+    @apply hidden;
+  }
+}
+
+.header .hamburger:hover,
+.header .hamburger:focus {
+  @apply !bg-transparent;
+}
+
+.header .hamburger span {
+  @apply block w-[30px] h-0.5 bg-white transition-all duration-300;
+  transform-origin: center;
+}
+
+/* Hamburger open state - X */
+.header .hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.header .hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header .hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Header Navigation - Reset all lists */
+.header .nav-primary ul {
+  @apply list-none p-0 m-0;
+}
+
+/* Header Menu - Hidden by default on mobile */
+.header .header-menu {
+  @apply overflow-hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease-out;
+}
+
+/* Header Menu - Open state */
+.header .header-menu.open {
+  max-height: 1000px;
+  transition: max-height 0.6s ease-in;
+}
+
+/* Mobile Menu - Accordion Style (default) */
+/* First level menu items */
+.header .nav-primary ul.nav > li {
+  @apply mb-2 border-b border-light-blue py-2;
+}
+
+.header .nav-primary ul.nav > li:last-child {
+  @apply border-b-0;
+}
+
+.header .nav-primary ul.nav > li > a {
+  @apply block text-white no-underline py-2 text-[20px] font-medium;
+}
+
+/* Chevron for parent items with children */
+.header .nav-primary ul.nav > li:has(> ul) > a {
+  @apply relative pr-8;
+}
+
+.header .nav-primary ul.nav > li:has(> ul) > a::after {
+  content: '';
+  @apply absolute top-1/2;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+/* Rotate chevron up when menu is open on mobile */
+.header .nav-primary ul.nav > li.open > a::after {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+/* Sub-menus - Accordion effect on mobile */
+.header .nav-primary ul.nav > li > ul {
+  @apply pl-0 overflow-hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+/* Show sub-menu when parent has 'open' class */
+.header .nav-primary ul.nav > li.open > ul {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
+}
+
+/* Sub-menu items */
+.header .nav-primary ul.nav > li > ul > li {
+  @apply mb-1;
+}
+
+.header .nav-primary ul.nav > li > ul > li > a {
+  @apply block py-1 text-base text-white no-underline;
+}
+
+/* Desktop Menu - Inline with Hover Dropdown */
+@media (min-width: 64rem) {
+  /* Reset header-menu visibility on desktop */
+  .header .header-menu {
+    max-height: none;
+    overflow: visible;
+  }
+
+  /* First level items inline */
+  .header .nav-primary ul.nav {
+    @apply flex flex-row gap-6 items-center;
+  }
+
+  .header .nav-primary ul.nav > li {
+    @apply relative mb-0 border-b-0 py-0;
+  }
+
+  .header .nav-primary ul.nav > li > a {
+    @apply py-3;
+  }
+
+  /* Blue underline on hover */
+  .header .nav-primary ul.nav > li > a:hover {
+    text-decoration: underline;
+    text-decoration-color: #0089C2;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 8px;
+  }
+
+  /* Reset mobile accordion styles for sub-menus */
+  .header .nav-primary ul.nav > li > ul {
+    @apply pl-0;
+    max-height: none;
+    overflow: visible;
+  }
+
+  /* Sub-menu styled as dropdown box - hidden by default */
+  .header .nav-primary ul.nav > li > ul {
+    @apply absolute top-full left-0 rounded-lg shadow-lg min-w-[200px] mt-2;
+    background-color: #EBF8FF;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  /* Show dropdown on hover */
+  .header .nav-primary ul.nav > li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Remove open class effect on desktop */
+  .header .nav-primary ul.nav > li.open > ul {
+    max-height: none;
+  }
+
+  /* Sub-menu items on desktop */
+  .header .nav-primary ul.nav > li > ul > li {
+    @apply mb-2;
+  }
+
+  .header .nav-primary ul.nav > li > ul > li:last-child {
+    @apply mb-0;
+  }
+
+  .header .nav-primary ul.nav > li > ul > li > a {
+    @apply pb-2 text-base;
+    color: #0A1319;
+  }
+
+  /* Underline on hover for sub-menu links */
+  .header .nav-primary ul.nav > li > ul > li > a:hover {
+    text-decoration: underline;
+  }
+}
